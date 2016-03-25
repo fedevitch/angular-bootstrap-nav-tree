@@ -192,15 +192,15 @@
                 branch.classes = [];
               }
               if (!branch.noLeaf && (!branch.children || branch.children.length === 0)) {
-                tree_icon = attrs.iconLeaf;
+                tree_icon = branch.iconLeaf || attrs.iconLeaf;
                 if (__indexOf.call(branch.classes, "leaf") < 0) {
                   branch.classes.push("leaf");
                 }
               } else {
                 if (branch.expanded) {
-                  tree_icon = attrs.iconCollapse;
+                  tree_icon = branch.iconCollapse || attrs.iconCollapse;
                 } else {
-                  tree_icon = attrs.iconExpand;
+                  tree_icon = branch.iconExpand || attrs.iconExpand;
                 }
               }
               scope.tree_rows.push({
